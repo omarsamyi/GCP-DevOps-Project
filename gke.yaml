@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gke-devops-prod
+spec:
+  selector:
+    matchLabels:
+      app: gke-devops-prod
+  template:
+    metadata:
+      labels:
+        app: gke-devops-prod
+    spec:
+      containers:
+      - name: gke-devops-prod
+        image: <Image>
+        resources: {}
+        ports:
+        - containerPort: 5000
+        env:
+        - name: PORT
+          value: "5000"
+        - name: ENV
+          value: "prod"
