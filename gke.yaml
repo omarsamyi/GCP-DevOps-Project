@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: gke-devops-prod
-        image: <Image>
+        image: gcr.io/sunlit-charge-404811/gcpdevops:latest
         resources: {}
         ports:
         - containerPort: 5000
