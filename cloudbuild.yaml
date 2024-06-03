@@ -1,0 +1,7 @@
+steps:
+  - name: 'docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/hello-world', '.']
+    id: 'build-and-push-docker-image'
+images:
+  - 'gcr.io/$PROJECT_ID/gcpdevops'
+timeout: '1200s'
